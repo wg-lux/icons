@@ -230,6 +230,23 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
+name = "potracer"
+version = "0.0.4"
+description = "Python Potrace"
+optional = false
+python-versions = "*"
+files = [
+    {file = "potracer-0.0.4-py2.py3-none-any.whl", hash = "sha256:350bb2c7c8532059165264974617d460999e0215cf2f459c0616fa8805c27ce6"},
+    {file = "potracer-0.0.4.tar.gz", hash = "sha256:32cbdb984446066bcfbe8b600142a54b90fa6da274b69219473205d6e4c09713"},
+]
+
+[package.dependencies]
+numpy = "*"
+
+[package.extras]
+cli = ["potrace-cli"]
+
+[[package]]
 name = "pytest"
 version = "8.3.3"
 description = "pytest: simple powerful testing with Python"
@@ -252,4 +269,4 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d16825aab09860b1136f293b4960cf24177762c68e04538f2adf56b33b7111ed"
+content-hash = "fdafa8abdac502872d92c67dadbdb0db0672bfd4a408b78e05c8e2b10e05d138"

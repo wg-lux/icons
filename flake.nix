@@ -96,14 +96,15 @@
 
       propagatedBuildInputs =  with pkgs.python311Packages; [
         pillow
-        potrace
       ];
 
       buildInputs = with pkgs; [];
     };
 
-    
-
+    devShells.x86_64-linux.default = pkgs.mkShell {
+      inputsFrom = [ self.packages.x86_64-linux.poetryApp ];
+      packages = [ pkgs.poetry ];
+    };
 
     nixConfig = {
         binary-caches = [
@@ -115,9 +116,5 @@
         # enable cuda support
         cudaSupport = true;
       };
-    devShells.x86_64-linux.default = pkgs.mkShell {
-      inputsFrom = [ self.packages.x86_64-linux.poetryApp ];
-      packages = [ pkgs.poetry ];
-    };
   };
 }
